@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: Inter;
+    src: url('./assets/fonts/static/Inter-Regular.ttf');
+}
+@font-face {
+    font-family: Inter-b;
+    src: url('./assets/fonts/static/Inter-Bold.ttf');
+}
+@font-face {
+
+    font-family: Inter-e;
+    src: url('./assets/fonts/static/Inter-ExtraBold.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+   /* width:  1440px ; */
+   margin-left: 150px;
+   margin-right: 150px;
+
+   /* height: 100vh; */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-family: Inter;
+}
+.menu{
+    width: 500PX;
+}
+.menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+.menu ul li a:hover{
+    color: hsl(5, 85%, 63%);
+}
+.mobile{
+    display: none;
+}
+.section{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    gap: 30px;
+    margin-top: 50px;
+}
+.main_pic{
+    width: 100%;
+    /* height: 0%; */
+}
+.top{
+    /* width: 100%; */
+    height: auto;
+}
+.left{
+   width:  100%;
+}
+.right{
+    width: 40%;
+    background-color: hsl(240, 100%, 5%);
+    padding: 20px;
+    height: 100%
+}
+.mt{
+    color: hsl(36, 100%, 99%);
+    font-family: Inter-b;
+    text-decoration: none;
+}
+.color{
+    color: hsl(35, 77%, 62%);
+    font-family: Inter-b;
+}
+.mp{
+    font-family: Inter;
+    font-size: 15px;
+    color: hsl(233, 8%, 79%);
+}
+.title{
+    margin-bottom: 30px;
+}
+.title a:hover{
+color: hsl(35, 77%, 62%);
+}
+.pb{
+    border-bottom: solid 2px hsl(233, 8%, 79%,0.2);
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.bp{
+    font-family: Inter-e !important;
+    font-weight: 800 !important;
+    font-size: 49px;
+    width: 60%;
+    margin-top: 20px;
+}
+.pp{
+    font-family: Inter !important;
+    color: hsl(240, 100%, 5%);
+    line-height: 25px;
+    width: 90%;
+    font-size: 20px;
+}
+.btn{
+    background-color:  hsl(5, 85%, 63%);
+    padding: 15px 70px 15px 70px;
+    border: none;
+    color: hsl(36, 100%, 99%);
+    font-family: Inter-b !important;
+    cursor: pointer;
+}
+.sec{
+    width: 50%;
+}
+.lsec{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 30px 0;
+}
+.parts{
+    display: flex;
+    gap: 25px;
+}
+.mr{
+    margin-right: 30px;
+
+}
+.num{
+    font-family: Inter-e !important; 
+    font-size: 30px;
+    color: hsl(233, 8%, 79%);
+}
+.tt{
+    font-family: Inter-b;
+    text-decoration: none;
+    color: hsl(240, 100%, 5%);
+}
+.pf{
+    font-family: Inter;
+    color: hsl(236, 13%, 42%);
+}
+button:hover{
+    background-color: hsl(240, 100%, 5%) ;
+}
+.pic{
+    display: none;
+    }
+@media (max-width : 390px) {
+    .App{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .mobile{
+        display: block;
+        background-color: rgb(255, 255, 255);
+        height: 100vh;
+    }
+    .menu{
+        width:70%;        ;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile ul{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        margin-top: 80px;
+        font-family: Inter;
+    }
+    .mobile ul li{
+        padding: 0px 0px 25px 0px;
+        
+    }
+.x , .ham{
+    width: 50px;
+    cursor: pointer;
+}
+.x , .ham{
+    display: none;
+}
+.x{
+    margin: 10px;
+}
+.part2{
+    display: none;
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+}
+.part{
+    display: flex;
+    justify-content: end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.show{
+    display: flex;
+    flex-direction: column;
+}
+.slide{
+    animation: slide 0.2s ease-in-out;
+
+}
+.end{
+    display: flex;
+    justify-content: end;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.mobile{
+    height: auto !important;
+}
+.main_pic{
+display: none;
+}
+.pic{
+    display: block;
+    width: 100%;
+    }
+.bottom{
+    display: flex;
+    flex-direction: column;
+}
+.sec , .pb , .bp{
+    width: 100%;
+}
+.bp{
+    margin-bottom: 0;
+}
+.right{
+    width: 90%;
+}
+.lsec{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes slide {
+    0% {
+        transform: translateX(100px);
+    }
+   
+    100%{
+        transform: rotateX(0px);
+    }
 }
